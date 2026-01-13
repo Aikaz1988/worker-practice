@@ -5,45 +5,45 @@
 #include <string>
 
 /*
-Класс WORKER предназначен для представления работника организации
-и хранения его основных характеристик.
+РљР»Р°СЃСЃ WORKER РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ СЂР°Р±РѕС‚РЅРёРєР° РѕСЂРіР°РЅРёР·Р°С†РёРё
+Рё С…СЂР°РЅРµРЅРёСЏ РµРіРѕ РѕСЃРЅРѕРІРЅС‹С… С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє.
 */
 class WORKER {
 private:
-    std::string fullName;   // Фамилия, имя и отчество работника
-    std::string position;   // Занимаемая должность
-    double salary;          // Размер заработной платы
-    int startYear;          // Год поступления на работу
+    std::string fullName;   // Р¤Р°РјРёР»РёСЏ, РёРјСЏ Рё РѕС‚С‡РµСЃС‚РІРѕ СЂР°Р±РѕС‚РЅРёРєР°
+    std::string position;   // Р—Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+    double salary;          // Р Р°Р·РјРµСЂ Р·Р°СЂР°Р±РѕС‚РЅРѕР№ РїР»Р°С‚С‹
+    int startYear;          // Р“РѕРґ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° СЂР°Р±РѕС‚Сѓ
 
 public:
-    // Конструктор по умолчанию
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
     WORKER();
 
-    // Конструктор с параметрами
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
     WORKER(const std::string& fullName,
         const std::string& position,
         double salary,
         int startYear);
 
-    // Деструктор
+    // Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
     ~WORKER();
 
-    // Методы доступа
+    // РњРµС‚РѕРґС‹ РґРѕСЃС‚СѓРїР°
     std::string getFullName() const;
     std::string getPosition() const;
     double getSalary() const;
     int getStartYear() const;
 
-    // Методы изменения
+    // РњРµС‚РѕРґС‹ РёР·РјРµРЅРµРЅРёСЏ
     void setFullName(const std::string& fullName);
     void setPosition(const std::string& position);
     void setSalary(double salary);
     void setStartYear(int startYear);
 
-    // Метод вычисления стажа работы
+    // РњРµС‚РѕРґ РІС‹С‡РёСЃР»РµРЅРёСЏ СЃС‚Р°Р¶Р° СЂР°Р±РѕС‚С‹
     int getExperience(int currentYear) const;
 
-    // Метод вывода информации о работнике
+    // РњРµС‚РѕРґ РІС‹РІРѕРґР° РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЂР°Р±РѕС‚РЅРёРєРµ
     void display() const;
 };
 
