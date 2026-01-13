@@ -1,4 +1,3 @@
-// worker-practice.cpp
 #include <iostream>
 #include <vector>
 #include <limits>
