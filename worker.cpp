@@ -1,12 +1,12 @@
 #include "worker.h"
 #include <iostream>
 
-// Конструктор по умолчанию
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 WORKER::WORKER()
     : fullName(""), position(""), salary(0.0), startYear(0) {
 }
 
-// Конструктор с параметрами
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 WORKER::WORKER(const std::string& fullName,
     const std::string& position,
     double salary,
@@ -17,16 +17,16 @@ WORKER::WORKER(const std::string& fullName,
     startYear(startYear) {
 }
 
-// Деструктор
+// Р”РµСЃС‚СЂСѓРєС‚РѕСЂ
 WORKER::~WORKER() {}
 
-// Методы доступа
+// РњРµС‚РѕРґС‹ РґРѕСЃС‚СѓРїР°
 std::string WORKER::getFullName() const { return fullName; }
 std::string WORKER::getPosition() const { return position; }
 double WORKER::getSalary() const { return salary; }
 int WORKER::getStartYear() const { return startYear; }
 
-// Методы изменения
+// РњРµС‚РѕРґС‹ РёР·РјРµРЅРµРЅРёСЏ
 void WORKER::setFullName(const std::string& fullName) {
     this->fullName = fullName;
 }
@@ -43,12 +43,12 @@ void WORKER::setStartYear(int startYear) {
     this->startYear = startYear;
 }
 
-// Расчёт стажа работы
+// Р Р°СЃС‡С‘С‚ СЃС‚Р°Р¶Р° СЂР°Р±РѕС‚С‹
 int WORKER::getExperience(int currentYear) const {
     return currentYear - startYear;
 }
 
-// Вывод информации
+// Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё
 void WORKER::display() const {
     std::cout << "Full name: " << fullName << std::endl;
     std::cout << "Position: " << position << std::endl;
